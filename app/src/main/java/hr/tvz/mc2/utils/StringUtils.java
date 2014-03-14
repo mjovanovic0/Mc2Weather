@@ -1,8 +1,6 @@
-package com.example.dragandrop.utils;
+package hr.tvz.mc2.utils;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.os.Parcelable;
 
 /**
  * Created by mjovanovic on 13.03.14..

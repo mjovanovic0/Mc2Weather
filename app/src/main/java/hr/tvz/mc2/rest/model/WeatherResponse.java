@@ -1,4 +1,4 @@
-package com.example.dragandrop.rest.model;
+package hr.tvz.mc2.rest.model;
 
 import com.google.gson.annotations.SerializedName;
 

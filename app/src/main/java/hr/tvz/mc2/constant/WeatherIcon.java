@@ -1,7 +1,7 @@
-package com.example.dragandrop.constant;
+package hr.tvz.mc2.constant;
 
 
-import com.example.dragandrop.app.R;
+import hr.tvz.mc2.R;
 
 /**
  * Created by mjovanovic on 13.03.14..

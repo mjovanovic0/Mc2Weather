@@ -1,10 +1,7 @@
-package com.example.dragandrop.utils;
+package hr.tvz.mc2.utils;
 
-import android.util.Log;
+import hr.tvz.mc2.rest.model.ForecastResponse;
 
-import com.example.dragandrop.rest.model.ForecastResponse;
-
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;

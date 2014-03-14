@@ -1,9 +1,9 @@
-package com.example.dragandrop.rest;
+package hr.tvz.mc2.rest;
 
 import android.util.Log;
 
-import com.example.dragandrop.rest.model.ForecastResponse;
-import com.example.dragandrop.rest.model.WeatherResponse;
+import hr.tvz.mc2.rest.model.ForecastResponse;
+import hr.tvz.mc2.rest.model.WeatherResponse;
 
 import retrofit.Callback;
 import retrofit.RestAdapter;

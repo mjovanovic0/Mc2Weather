@@ -1,4 +1,4 @@
-package com.example.dragandrop.custom;
+package hr.tvz.mc2.custom;
 
 import android.content.Context;
 import android.graphics.Typeface;

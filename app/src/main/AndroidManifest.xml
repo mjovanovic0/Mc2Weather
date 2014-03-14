@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dragandrop.app" >
+          package="hr.tvz.mc2">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.dragandrop.app.MainActivity"
+            android:name="hr.tvz.mc2.app.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 

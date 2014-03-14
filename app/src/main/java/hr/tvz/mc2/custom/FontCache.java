@@ -1,10 +1,8 @@
-package com.example.dragandrop.custom;
+package hr.tvz.mc2.custom;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.util.Log;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,25 +1,14 @@
-package com.example.dragandrop.app;
+package hr.tvz.mc2.app;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.example.dragandrop.adapters.ForecastAdapter;
-import com.example.dragandrop.constant.WeatherIcon;
-import com.example.dragandrop.rest.RestManager;
-import com.example.dragandrop.rest.model.ForecastResponse;
-import com.example.dragandrop.rest.model.WeatherResponse;
-import com.example.dragandrop.utils.ForecastUtils;
-import com.example.dragandrop.utils.StringUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -28,12 +17,17 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import hr.tvz.mc2.R;
+import hr.tvz.mc2.adapters.ForecastAdapter;
+import hr.tvz.mc2.constant.WeatherIcon;
+import hr.tvz.mc2.rest.RestManager;
+import hr.tvz.mc2.rest.model.ForecastResponse;
+import hr.tvz.mc2.rest.model.WeatherResponse;
+import hr.tvz.mc2.utils.ForecastUtils;
+import hr.tvz.mc2.utils.StringUtils;
 import retrofit.Callback;
-import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
-
-import static com.example.dragandrop.rest.model.ForecastResponse.*;
 
 
 public class MainActivity extends ActionBarActivity {

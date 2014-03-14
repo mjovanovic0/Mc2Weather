@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <com.example.dragandrop.custom.RobotoTextView
+    <hr.tvz.mc2.custom.RobotoTextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -21,7 +21,7 @@
         android:layout_height="fill_parent"
         android:layout_weight=".1">
 
-        <com.example.dragandrop.custom.RobotoTextView
+        <hr.tvz.mc2.custom.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -47,7 +47,7 @@
             android:scaleType="fitCenter"
             android:layout_gravity="center" />
 
-        <com.example.dragandrop.custom.RobotoTextView
+        <hr.tvz.mc2.custom.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -64,7 +64,7 @@
             android:textAlignment="center" />
     </LinearLayout>
 
-    <com.example.dragandrop.custom.RobotoTextView
+    <hr.tvz.mc2.custom.RobotoTextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"

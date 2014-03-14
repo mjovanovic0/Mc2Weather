@@ -1,8 +1,6 @@
-package com.example.dragandrop.adapters;
+package hr.tvz.mc2.adapters;
 
 import android.content.Context;
-import android.media.Image;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dragandrop.app.MainActivity;
-import com.example.dragandrop.app.R;
-import com.example.dragandrop.constant.WeatherIcon;
-import com.example.dragandrop.rest.model.ForecastResponse;
-import com.example.dragandrop.utils.ForecastUtils;
-import com.example.dragandrop.utils.StringUtils;
-
-
 import java.util.List;
+
+import hr.tvz.mc2.R;
+import hr.tvz.mc2.app.MainActivity;
+import hr.tvz.mc2.constant.WeatherIcon;
+import hr.tvz.mc2.rest.model.ForecastResponse;
+import hr.tvz.mc2.utils.ForecastUtils;
+import hr.tvz.mc2.utils.StringUtils;
 
 /**
  * Created by mjovanovic on 13.03.14..
