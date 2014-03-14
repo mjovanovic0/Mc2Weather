@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dragandrop.app.MainActivity"
+    android:baselineAligned="false"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:background="#d56b3d">
+
+        <com.example.dragandrop.custom.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Today"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:padding="@dimen/padding_today" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgToday"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:layout_weight=".1" />
+
+        <com.example.dragandrop.custom.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Partly Cloudy"
+            android:id="@+id/txtDescr"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_title" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <com.example.dragandrop.custom.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/txtTempMin"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:text="Min 2" />
+
+            <com.example.dragandrop.custom.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView30"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:text="-"
+                android:paddingLeft="@dimen/padding_today"
+                android:paddingRight="@dimen/padding_today" />
+
+            <com.example.dragandrop.custom.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/txtTempMax"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:text="Min 2" />
+        </LinearLayout>
+
+        <com.example.dragandrop.custom.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="10"
+            android:id="@+id/txtTemp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_temp"
+            android:paddingTop="@dimen/padding_today" />
+
+        <com.example.dragandrop.custom.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Night - 2"
+            android:id="@+id/txtTempNight"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff" />
+
+        <com.example.dragandrop.custom.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Zagreb"
+            android:id="@+id/txtCityName"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_title"
+            android:paddingTop="@dimen/padding_today"
+            android:layout_gravity="center_horizontal" />
+
+        <com.example.dragandrop.custom.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="31.02.2014."
+            android:id="@+id/txtDate"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:paddingBottom="@dimen/padding_today" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_weight="0.9">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgSettings"
+                android:src="@drawable/settings_btn"
+                android:scaleType="fitCenter"
+                android:layout_weight=".1"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp" />
+
+            <com.example.dragandrop.custom.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Next five days"
+                android:id="@+id/textView8"
+                android:gravity="center_horizontal"
+                android:background="@drawable/layout_bg" />
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/listView"
+            android:layout_weight=".1"
+            android:longClickable="false"
+            android:choiceMode="none"
+            android:listSelector="@android:color/transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>

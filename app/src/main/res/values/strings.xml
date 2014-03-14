@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mc2 Weather</string>
+
+    <string name="cond200">Thunderstorm with light rain</string>
+    <string name="cond201">Thunderstorm with rain</string>
+    <string name="cond202">Thunderstorm with heavy rain</string>
+    <string name="cond210">Light thunderstorm</string>
+    <string name="cond211">Thunderstorm</string>
+    <string name="cond212">Heavy thunderstorm</string>
+    <string name="cond221">Ragged thunderstorm</string>
+    <string name="cond230">Thunderstorm with light drizzle</string>
+    <string name="cond231">Thunderstorm with drizzle</string>
+    <string name="cond232">Thunderstorm with heavy drizzle</string>
+
+    <string name="cond300">Light intensity drizzle</string>
+    <string name="cond301">Drizzle</string>
+    <string name="cond302">Heavy intensity drizzle</string>
+    <string name="cond310">Light intensity drizzle rain</string>
+    <string name="cond311">Drizzle rain</string>
+    <string name="cond312">Heavy intensity drizzle rain</string>
+    <string name="cond321">Shower drizzle</string>
+
+    <string name="cond500">Light rain</string>
+    <string name="cond501">Moderate rain</string>
+    <string name="cond502">Heavy intensity rain</string>
+    <string name="cond503">Very heavy rain</string>
+    <string name="cond504">Extreme rain</string>
+    <string name="cond511">Freezing rain</string>
+    <string name="cond520">Light intensity shower rain</string>
+    <string name="cond521">Shower rain</string>
+    <string name="cond522">Heavy intensity shower rain</string>
+
+    <string name="cond600">Light snow</string>
+    <string name="cond601">Snow</string>
+    <string name="cond602">Heavy snow</string>
+    <string name="cond611">Sleet</string>
+    <string name="cond621">Shower snow</string>
+
+    <string name="cond701">Mist</string>
+    <string name="cond711">Smoke</string>
+    <string name="cond721">Haze</string>
+    <string name="cond731">Dust Whirls</string>
+    <string name="cond741">Fog</string>
+
+    <string name="cond800">Clear sky</string>
+    <string name="cond801">Few clouds</string>
+    <string name="cond802">Scattered clouds</string>
+    <string name="cond803">Broken clouds</string>
+    <string name="cond804">Overcast clouds</string>
+
+    <string name="cond900">Tornado</string>
+    <string name="cond901">Tropical storm</string>
+    <string name="cond902">Hurricane</string>
+    <string name="cond903">Cold</string>
+    <string name="cond904">Hot</string>
+    <string name="cond905">Windy</string>
+    <string name="cond906">Hail</string>
+
+
+
+</resources>
