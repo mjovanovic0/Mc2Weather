@@ -33,8 +33,8 @@ import retrofit.client.Response;
 public class MainActivity extends ActionBarActivity {
 
     public static final String DEGREE_CHAR = "" + (char) 0x00B0;
-    private static final String CITY_NAME = "Zagreb,hr";
-    private static final String CITY_NAME_SHORT = "Zagreb";
+    private static final String CITY_NAME = "London,uk";
+    private static final String CITY_NAME_SHORT = "London";
 
     @InjectView(R.id.txtCityName) TextView txtCityName;
     @InjectView(R.id.txtTemp) TextView txtTemp;
@@ -139,5 +139,11 @@ public class MainActivity extends ActionBarActivity {
 
     public void setForecastResponse(ForecastResponse forecastResponse) {
         this.forecastResponse = forecastResponse;
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        pd.cancel();
     }
 }
