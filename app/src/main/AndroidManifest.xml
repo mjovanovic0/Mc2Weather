@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="hr.tvz.mc2.app.MainActivity"
+            android:name=".app.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 

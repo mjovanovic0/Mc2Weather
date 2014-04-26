@@ -8,4 +8,6 @@
 
     <dimen name="padding_today">10dp</dimen>
 
-    </resources>
+    <dimen name="navigation_drawer_width">160dp</dimen>
+
+</resources>

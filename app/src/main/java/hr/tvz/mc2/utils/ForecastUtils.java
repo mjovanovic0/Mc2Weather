@@ -1,11 +1,11 @@
 package hr.tvz.mc2.utils;
 
-import hr.tvz.mc2.rest.model.ForecastResponse;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import hr.tvz.mc2.rest.model.ForecastResponse;
 
 /**
  * Created by mjovanovic on 13.03.14..
@@ -50,5 +50,6 @@ public final class ForecastUtils {
                 forecasts.add(f);
             }
         }
+
     }
 }

@@ -24,6 +24,7 @@ public class ForecastAdapter extends ArrayAdapter<ForecastResponse.Forecast> {
 
     private LayoutInflater inflater;
 
+
     public ForecastAdapter (Context context, List<ForecastResponse.Forecast> objects) {
         super(context, 0, objects);
         inflater = LayoutInflater.from(context);
@@ -38,11 +39,11 @@ public class ForecastAdapter extends ArrayAdapter<ForecastResponse.Forecast> {
 
         ForecastResponse.Forecast forecast = getItem(position);
 
-        TextView txtSideDay = (TextView)view.findViewById(R.id.txtSideDay);
-        TextView txtSideTempMin = (TextView)view.findViewById(R.id.txtSideTempMin);
-        ImageView imgSide = (ImageView)view.findViewById(R.id.imgSideImage);
-        TextView txtSideTempMax = (TextView)view.findViewById(R.id.txtSideTempMax);
-        TextView txtSideDescr = (TextView)view.findViewById(R.id.txtSideDescr);
+        TextView txtSideDay = (TextView) view.findViewById(R.id.txtSideDay);
+        TextView txtSideTempMin = (TextView) view.findViewById(R.id.txtSideTempMin);
+        ImageView imgSide = (ImageView) view.findViewById(R.id.imgSideImage);
+        TextView txtSideTempMax = (TextView) view.findViewById(R.id.txtSideTempMax);
+        TextView txtSideDescr = (TextView) view.findViewById(R.id.txtSideDescr);
 
         txtSideDay.setText(ForecastUtils.getDateName(forecast.getDt()));
 
