@@ -1,9 +1,9 @@
 package hr.tvz.mc2.app;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -30,7 +30,7 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 
-public class MainActivity_1 extends ActionBarActivity {
+public class MainActivity_1 extends Activity {
 
     public static final String DEGREE_CHAR = "" + (char) 0x00B0;
     private static final String CITY_NAME = "Zagreb,hr";

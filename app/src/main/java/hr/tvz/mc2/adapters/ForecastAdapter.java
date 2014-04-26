@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import hr.tvz.mc2.R;
-import hr.tvz.mc2.app.MainActivity;
+import hr.tvz.mc2.app.MainActivity_1;
 import hr.tvz.mc2.constant.WeatherIcon;
 import hr.tvz.mc2.rest.model.ForecastResponse;
 import hr.tvz.mc2.utils.ForecastUtils;
@@ -23,6 +23,7 @@ import hr.tvz.mc2.utils.StringUtils;
 public class ForecastAdapter extends ArrayAdapter<ForecastResponse.Forecast> {
 
     private LayoutInflater inflater;
+
 
     public ForecastAdapter (Context context, List<ForecastResponse.Forecast> objects) {
         super(context, 0, objects);
@@ -38,16 +39,16 @@ public class ForecastAdapter extends ArrayAdapter<ForecastResponse.Forecast> {
 
         ForecastResponse.Forecast forecast = getItem(position);
 
-        TextView txtSideDay = (TextView)view.findViewById(R.id.txtSideDay);
-        TextView txtSideTempMin = (TextView)view.findViewById(R.id.txtSideTempMin);
-        ImageView imgSide = (ImageView)view.findViewById(R.id.imgSideImage);
-        TextView txtSideTempMax = (TextView)view.findViewById(R.id.txtSideTempMax);
-        TextView txtSideDescr = (TextView)view.findViewById(R.id.txtSideDescr);
+        TextView txtSideDay = (TextView) view.findViewById(R.id.txtSideDay);
+        TextView txtSideTempMin = (TextView) view.findViewById(R.id.txtSideTempMin);
+        ImageView imgSide = (ImageView) view.findViewById(R.id.imgSideImage);
+        TextView txtSideTempMax = (TextView) view.findViewById(R.id.txtSideTempMax);
+        TextView txtSideDescr = (TextView) view.findViewById(R.id.txtSideDescr);
 
         txtSideDay.setText(ForecastUtils.getDateName(forecast.getDt()));
 
-        txtSideTempMin.setText(StringUtils.build(forecast.getTemperatures().getMin(), MainActivity.DEGREE_CHAR));
-        txtSideTempMax.setText(StringUtils.build(forecast.getTemperatures().getMax(), MainActivity.DEGREE_CHAR));
+        txtSideTempMin.setText(StringUtils.build(forecast.getTemperatures().getMin(), MainActivity_1.DEGREE_CHAR));
+        txtSideTempMax.setText(StringUtils.build(forecast.getTemperatures().getMax(), MainActivity_1.DEGREE_CHAR));
 
         imgSide.setImageResource(WeatherIcon.getDrawable(forecast.getWeathers()[0].getIcon(), true));
         txtSideDescr.setText(StringUtils.getStringByName(view.getContext(), "cond", forecast.getWeathers()[0].getId()));

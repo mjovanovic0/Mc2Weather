@@ -1,9 +1,46 @@
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:choiceMode="singleChoice"
-    android:divider="@android:color/transparent"
-    android:dividerHeight="0dp"
-    android:background="#cccc"
-    tools:context="com.ivankocijan.test.app.NavigationDrawerFragment" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/imgSettings"
+            android:src="@drawable/settings_btn"
+            android:scaleType="fitCenter"
+            android:layout_weight=".1"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"/>
+
+        <hr.tvz.mc2.custom.RobotoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Next five days"
+            android:id="@+id/textView8"
+            android:gravity="center_horizontal"
+            android:background="@drawable/layout_bg"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:id="@+id/navigation_drawer_list_view"
+        android:layout_weight=".1"
+        android:longClickable="false"
+        android:choiceMode="none"
+        android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>
+
