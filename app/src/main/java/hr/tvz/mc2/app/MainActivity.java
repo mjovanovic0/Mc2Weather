@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 import hr.tvz.mc2.R;
 import hr.tvz.mc2.fragments.MainScreenFragment;
 import hr.tvz.mc2.fragments.NavigationDrawerFragment;
+import hr.tvz.mc2.fragments.SettingsFragment;
 import hr.tvz.mc2.helpers.TransactionHelper;
 import hr.tvz.mc2.rest.RestManager;
 import hr.tvz.mc2.rest.model.ForecastResponse;
@@ -26,6 +28,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     public static final String DEGREE_CHAR = "" + (char) 0x00B0;
     private static final String CITY_NAME = "Zagreb,hr";
     private static final String CITY_NAME_SHORT = "Zagreb";
+
 
     private WeatherResponse weatherResponse;
     private ForecastResponse forecastResponse;
@@ -48,7 +51,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout), forecasts);
 
-        TransactionHelper.switchContentNoAnimation(MainScreenFragment.getInstance(), getFragmentManager(), MainScreenFragment.TAG, R.id.container);
+        TransactionHelper.switchContentSlideInFromLeft(MainScreenFragment.getInstance(), getFragmentManager(), MainScreenFragment.TAG, R.id.container);
 
         RestManager.getWeather(CITY_NAME, cityWeatherCallback);
         RestManager.getForecast(CITY_NAME_SHORT, cityForecastCallback);
@@ -108,7 +111,31 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     }
 
     @Override
-    public void onNavigationDrawerItemSelected (int position) {
-        //TODO
+    public void onNavigationDrawerItemSelected (int position, View viewClicked) {
+
+        if (viewClicked != null) {
+
+            switch (viewClicked.getId()) {
+                case R.id.imgSettings:
+
+                    TransactionHelper.switchContentSlideInFromLeft(new SettingsFragment(), getFragmentManager(), "tag", R.id.container);
+                    lockDrawer();
+
+                    break;
+
+            }
+
+        }
+
+    }
+
+    @Override
+    public void lockDrawer () {
+        mNavigationDrawerFragment.lockDrawer();
+    }
+
+    @Override
+    public void unlockDrawer () {
+        mNavigationDrawerFragment.unlockDrawer();
     }
 }

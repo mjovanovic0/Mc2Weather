@@ -61,13 +61,10 @@ public class MainScreenFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_main_screen, container, false);
 
-
         ButterKnife.inject(this, rootView);
-
 
         return rootView;
     }
-
 
     @Override
     public void onDestroy () {

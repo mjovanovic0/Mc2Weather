@@ -10,10 +10,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 import hr.tvz.mc2.R;
 import hr.tvz.mc2.adapters.ForecastAdapter;
 import hr.tvz.mc2.rest.model.ForecastResponse;
@@ -53,6 +56,9 @@ public class NavigationDrawerFragment extends android.app.Fragment {
     private ForecastAdapter listAdapter;
     private ListView list;
 
+    @InjectView(R.id.imgSettings)
+    protected ImageView imgSettings;
+
     public NavigationDrawerFragment () {
     }
 
@@ -87,12 +93,32 @@ public class NavigationDrawerFragment extends android.app.Fragment {
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState) {
 
+
         View rootView = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        ButterKnife.inject(rootView);
 
         list = (ListView) rootView.findViewById(R.id.navigation_drawer_list_view);
+        imgSettings = (ImageView) rootView.findViewById(R.id.imgSettings);
+
+        imgSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+
+                mDrawerLayout.closeDrawer(mFragmentContainerView);
+
+                mCallbacks.onNavigationDrawerItemSelected(0, imgSettings);
+            }
+        });
 
 
         return rootView;
+    }
+
+    @Override
+    public void onDestroy () {
+        super.onDestroy();
+
+        ButterKnife.reset(this);
     }
 
     /**
@@ -175,9 +201,10 @@ public class NavigationDrawerFragment extends android.app.Fragment {
 
         if (mDrawerLayout != null) {
             mDrawerLayout.closeDrawer(mFragmentContainerView);
+
         }
         if (mCallbacks != null) {
-            mCallbacks.onNavigationDrawerItemSelected(position);
+            mCallbacks.onNavigationDrawerItemSelected(position, null);
         }
     }
 
@@ -221,6 +248,29 @@ public class NavigationDrawerFragment extends android.app.Fragment {
         /**
          * Called when an item in the navigation drawer is selected.
          */
-        void onNavigationDrawerItemSelected (int position);
+        void onNavigationDrawerItemSelected (int position, View viewClicked);
+
+
+        void lockDrawer ();
+
+        void unlockDrawer ();
+
     }
+
+
+    public void lockDrawer () {
+        if (mDrawerLayout != null) {
+            mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+        }
+    }
+
+    public void unlockDrawer () {
+
+        if (mDrawerLayout != null) {
+
+            mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+
+        }
+    }
+
 }
